@@ -13,12 +13,12 @@ const binarySearch = (item) => {
             return mid;
         } else if (list[mid] > item) {
             max = mid - 1;
-        } else if (list[mid] < item) {
-            min = mid + 1;
         } else {
-            return 'not found';
+            min = mid + 1;
         }
     }
+
+    return 'not found';
 }
 
 console.log('Initial list: ', list);
