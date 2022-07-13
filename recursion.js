@@ -5,7 +5,9 @@ function sum(arr) {
 }
 
 function count(arr) {
+    if(!arr[0]) return 0;
 
+    return 1 + count(arr.slice(1))
 }
 
 function biggest(arr) {
@@ -16,4 +18,4 @@ function biggest(arr) {
     return arr[0] > biggestNumber ? arr[0] : biggestNumber;
 }
 
-console.log(biggest([2, 4, 7, 10]))
+console.log(biggest([1, 2, 123, 4, 5, 100]));
